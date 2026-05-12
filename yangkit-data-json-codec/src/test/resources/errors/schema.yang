@@ -1,0 +1,14 @@
+module schema {
+    yang-version 1.1;
+    namespace "urn:schema";
+    prefix schema;
+
+    container container {
+        leaf l1 {type int8;}
+        leaf l2 {type int16;}
+        leaf l3 {type int32;}
+        leaf l4 {type uint8;}
+        leaf l5 {type uint16;}
+        leaf l6 {type uint32;}
+    }
+}

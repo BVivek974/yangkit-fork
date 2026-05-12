@@ -439,6 +439,14 @@ public class JsonCodecUtil {
             recordBuilder.setErrorMessage(e.getErrorMsg());
             validatorResultBuilder.addRecord(recordBuilder.build());
             return validatorResultBuilder.build();
+        } catch (NullPointerException e){
+            ValidatorRecordBuilder<String, JsonNode> recordBuilder = new ValidatorRecordBuilder<>();
+            recordBuilder.setErrorTag(ErrorTag.BAD_ELEMENT);
+            recordBuilder.setErrorPath("");
+            recordBuilder.setBadElement(child);
+            recordBuilder.setErrorMessage(new ErrorMessage(e.getMessage()));
+            validatorResultBuilder.addRecord(recordBuilder.build());
+            return validatorResultBuilder.build();
         }
         sonData = yangDataContainer.getDataChild(sonData.getIdentifier());
         if (sonData instanceof YangDataContainer) {
