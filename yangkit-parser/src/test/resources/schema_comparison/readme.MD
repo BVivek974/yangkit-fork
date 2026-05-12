@@ -1,0 +1,1 @@
+unit test from https://github.com/CESNET/libyang/tree/schema_comparison/tests/utests/schema_comparison

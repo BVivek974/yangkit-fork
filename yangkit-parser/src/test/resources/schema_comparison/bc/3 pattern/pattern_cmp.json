@@ -1,0 +1,149 @@
+{
+  "ietf-yang-schema-comparison:schema-comparison": {
+    "schema": [
+      {
+        "source": {
+          "module": "pattern",
+          "revision": "2000-01-01"
+        },
+        "target": {
+          "module": "pattern",
+          "revision": "2000-01-02"
+        },
+        "target-import": [
+          {
+            "module": "ietf-datastores",
+            "revision": "2018-02-14"
+          },
+          {
+            "module": "ietf-inet-types",
+            "revision": "2025-12-22"
+          },
+          {
+            "module": "ietf-yang-library",
+            "revision": "2019-01-04"
+          },
+          {
+            "module": "ietf-yang-schema-comparison",
+            "revision": "2026-05-05",
+            "enabled-feature": [
+              "parsed-schema"
+            ]
+          },
+          {
+            "module": "ietf-yang-structure-ext",
+            "revision": "2020-06-17"
+          },
+          {
+            "module": "ietf-yang-types",
+            "revision": "2025-12-22"
+          }
+        ],
+        "conformance": "backwards-compatible",
+        "module-comparison": [
+          {
+            "changed": [
+              {
+                "stmt": "import",
+                "change": "added",
+                "conformance": "backwards-compatible"
+              }
+            ],
+            "new": {
+              "import": {
+                "module": "ietf-yang-schema-comparison",
+                "prefix": "schema-cmp"
+              }
+            }
+          }
+        ],
+        "node-comparison": [
+          {
+            "node": "/pattern:l1",
+            "node-type": "leaf",
+            "changed": [
+              {
+                "stmt": "pattern",
+                "change": "removed",
+                "conformance": "backwards-compatible"
+              },
+              {
+                "stmt": "pattern",
+                "change": "added",
+                "conformance": "backwards-compatible"
+              }
+            ],
+            "old": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "string",
+                "pattern": [
+                  {
+                    "expression": "aa|bb|cc",
+                    "inverted": false
+                  }
+                ]
+              }
+            },
+            "new": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "string",
+                "pattern": [
+                  {
+                    "expression": "aa|bb|cc|dd|ee",
+                    "inverted": false,
+                    "ext-instance": [
+                      {
+                        "module": "ietf-yang-schema-comparison",
+                        "name": "bc-change-at",
+                        "argument": "1.1.0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": "/pattern:l2",
+            "node-type": "leaf",
+            "changed": [
+              {
+                "stmt": "pattern",
+                "change": "removed",
+                "conformance": "backwards-compatible"
+              }
+            ],
+            "old": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "string",
+                "pattern": [
+                  {
+                    "expression": "a|b|c",
+                    "inverted": false
+                  }
+                ]
+              }
+            },
+            "new": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "string"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

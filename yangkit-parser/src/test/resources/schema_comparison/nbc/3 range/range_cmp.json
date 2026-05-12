@@ -1,0 +1,172 @@
+{
+  "ietf-yang-schema-comparison:schema-comparison": {
+    "schema": [
+      {
+        "source": {
+          "module": "range",
+          "revision": "2000-01-01"
+        },
+        "target": {
+          "module": "range",
+          "revision": "2000-01-02"
+        },
+        "conformance": "non-backwards-compatible",
+        "node-comparison": [
+          {
+            "node": "/range:l1",
+            "node-type": "leaf",
+            "changed": [
+              {
+                "stmt": "range",
+                "change": "modified",
+                "conformance": "non-backwards-compatible"
+              }
+            ],
+            "old": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "uint16",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "0",
+                      "max": "10"
+                    },
+                    {
+                      "min": "20",
+                      "max": "50"
+                    },
+                    {
+                      "min": "100",
+                      "max": "100"
+                    }
+                  ]
+                }
+              }
+            },
+            "new": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "uint16",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "1",
+                      "max": "50"
+                    },
+                    {
+                      "min": "100",
+                      "max": "100"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "node": "/range:l2",
+            "node-type": "leaf",
+            "changed": [
+              {
+                "stmt": "range",
+                "change": "modified",
+                "conformance": "non-backwards-compatible"
+              }
+            ],
+            "old": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "int32",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "-10",
+                      "max": "0"
+                    },
+                    {
+                      "min": "100",
+                      "max": "200"
+                    }
+                  ]
+                }
+              }
+            },
+            "new": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "int32",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "-10",
+                      "max": "0"
+                    },
+                    {
+                      "min": "100",
+                      "max": "100"
+                    },
+                    {
+                      "min": "101",
+                      "max": "101"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "node": "/range:l3",
+            "node-type": "leaf",
+            "changed": [
+              {
+                "stmt": "range",
+                "change": "modified",
+                "conformance": "non-backwards-compatible"
+              }
+            ],
+            "old": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "int8",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "-10",
+                      "max": "10"
+                    }
+                  ]
+                }
+              }
+            },
+            "new": {
+              "status": "current",
+              "config": true,
+              "mandatory": false,
+              "type": {
+                "base-type": "int8",
+                "range": {
+                  "interval": [
+                    {
+                      "min": "-9",
+                      "max": "9"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
